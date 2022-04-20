@@ -23,20 +23,20 @@ NTPClient timeClient(ntpUDP, "pool.ntp.org");
 WiFiClientSecure espClient;
 
 //Wifi setting
-const char* ssid = "B2F51RmA_1";
-const char* password = "yefung1983";
+const char* ssid = "wifi";
+const char* password = "password";
 
 //MQTT setting
 const char* send_data_topic = "SensorData";
 const char* AWS_endpoint = "a18ls9ddgfsbwy-ats.iot.us-east-1.amazonaws.com"; //MQTT broker ip
 
 //API Gateway settting
-//const char* host = "31ukkhczse.execute-api.us-east-1.amazonaws.com";
-const char *host = "31ukkhczse"; //API Gateway
+//const char* host = "api-gateway.execute-api.us-east-1.amazonaws.com";
+const char *host = "api-gateway"; //API Gateway
 const char *service = "execute-api";
 String url = "/dev/registerState";
-const char *key = "AKIAU2NX2MFNPANZOVNW";
-const char *secret = "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";
+const char *key = "key";
+const char *secret = "secretKey";
 
 //Callback function for subscribe MQTT topic to receive command and send to Arduino
 void callback(char* topic, byte* payload, unsigned int length) {
